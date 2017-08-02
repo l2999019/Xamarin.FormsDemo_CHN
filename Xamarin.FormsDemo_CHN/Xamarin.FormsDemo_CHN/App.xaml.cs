@@ -17,20 +17,17 @@ namespace Xamarin.FormsDemo_CHN
 
         public static void SetMainPage()
         {
-            Current.MainPage = new TabbedPage
+            Current.MainPage = new MasterDetailPage
             {
-                Children =
+                Master = new NavigationPage(new UserPage())
                 {
-                    new NavigationPage(new ItemsPage())
-                    {
-                        Title = "Browse",
-                        Icon = Device.OnPlatform("tab_feed.png",null,null)
-                    },
-                    new NavigationPage(new AboutPage())
-                    {
-                        Title = "About",
-                        Icon = Device.OnPlatform("tab_about.png",null,null)
-                    },
+                    Title = "用户信息",
+                    Icon = Device.OnPlatform("tab_about.png", null, null)
+                } ,
+                Detail = new NavigationPage(new ItemsPage())
+                {
+                    Title = "列表",
+                    Icon = Device.OnPlatform("tab_feed.png", null, null)
                 }
             };
         }

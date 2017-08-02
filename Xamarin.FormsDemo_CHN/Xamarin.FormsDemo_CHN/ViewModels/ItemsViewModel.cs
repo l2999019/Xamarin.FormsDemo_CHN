@@ -17,7 +17,7 @@ namespace Xamarin.FormsDemo_CHN.ViewModels
 
         public ItemsViewModel()
         {
-            Title = "Browse";
+            Title = "内容列表";
             Items = new ObservableRangeCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 

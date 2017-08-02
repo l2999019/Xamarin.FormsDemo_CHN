@@ -78,12 +78,12 @@ namespace Xamarin.FormsDemo_CHN.Services
             items = new List<Item>();
             var _items = new List<Item>
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Buy some cat food", Description="The cats are hungry"},
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Learn F#", Description="Seems like a functional idea"},
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Learn to play guitar", Description="Noted"},
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Buy some new candles", Description="Pine and cranberry for that winter feel"},
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Complete holiday shopping", Description="Keep it a secret!"},
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Finish a todo list", Description="Done"},
+                new Item { Id = Guid.NewGuid().ToString(), Text = "标题1", Description="说明1"},
+                new Item { Id = Guid.NewGuid().ToString(), Text = "标题2", Description="说明2"},
+                new Item { Id = Guid.NewGuid().ToString(), Text = "标题3", Description="说明3"},
+                new Item { Id = Guid.NewGuid().ToString(), Text = "标题4", Description="说明4"},
+                new Item { Id = Guid.NewGuid().ToString(), Text = "标题5", Description="说明5"},
+                new Item { Id = Guid.NewGuid().ToString(), Text = "标题6", Description="说明6"},
             };
 
             foreach (Item item in _items)

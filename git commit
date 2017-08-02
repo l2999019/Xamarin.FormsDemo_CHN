@@ -1,0 +1,78 @@
+[33mcommit c81ac77523c913465371c05af47138ddf725dbe7[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: GuZhenYin <524808775@qq.com>
+Date:   Thu Jul 27 13:13:40 2017 +0800
+
+    模版提交
+
+ Xamarin.FormsDemo_CHN.sln                          |   66 [32m+[m
+ .../Assets/AboutAssets.txt                         |   19 [32m+[m
+ .../Xamarin.FormsDemo_CHN.Android/MainActivity.cs  |   22 [32m+[m
+ .../Properties/AndroidManifest.xml                 |    5 [32m+[m
+ .../Properties/AssemblyInfo.cs                     |   27 [32m+[m
+ .../Resources/AboutResources.txt                   |   44 [32m+[m
+ .../Resources/Resource.designer.cs                 | 5948 [32m++++++++++++++++++++[m
+ .../Resources/drawable-hdpi/profile_generic.png    |  Bin [31m0[m -> [32m3894[m bytes
+ .../Resources/drawable-mdpi/profile_generic.png    |  Bin [31m0[m -> [32m2548[m bytes
+ .../Resources/drawable-xhdpi/profile_generic.png   |  Bin [31m0[m -> [32m5324[m bytes
+ .../Resources/drawable-xxhdpi/profile_generic.png  |  Bin [31m0[m -> [32m8378[m bytes
+ .../Resources/drawable-xxxhdpi/profile_generic.png |  Bin [31m0[m -> [32m11997[m bytes
+ .../Resources/drawable/slideout.png                |  Bin [31m0[m -> [32m224[m bytes
+ .../Resources/layout/Tabbar.axml                   |    2 [32m+[m
+ .../Resources/layout/Toolbar.axml                  |    2 [32m+[m
+ .../Resources/values/strings.xml                   |    4 [32m+[m
+ .../Resources/values/styles.xml                    |   27 [32m+[m
+ .../Xamarin.FormsDemo_CHN.Android.csproj           |  133 [32m+[m
+ .../Xamarin.FormsDemo_CHN.Android/packages.config  |   13 [32m+[m
+ .../Xamarin.FormsDemo_CHN.iOS/AppDelegate.cs       |   18 [32m+[m
+ .../Xamarin.FormsDemo_CHN.iOS/Entitlements.plist   |    6 [32m+[m
+ .../Xamarin.FormsDemo_CHN.iOS/Info.plist           |   44 [32m+[m
+ .../LaunchScreen.storyboard                        |   39 [32m+[m
+ .../Xamarin.FormsDemo_CHN.iOS/Main.cs              |   15 [32m+[m
+ .../Resources/profile_generic.png                  |  Bin [31m0[m -> [32m4610[m bytes
+ .../Resources/profile_generic@2x.png               |  Bin [31m0[m -> [32m10315[m bytes
+ .../Resources/profile_generic@3x.png               |  Bin [31m0[m -> [32m16647[m bytes
+ .../Resources/slideout.png                         |  Bin [31m0[m -> [32m181[m bytes
+ .../Resources/slideout@2x.png                      |  Bin [31m0[m -> [32m224[m bytes
+ .../Resources/tab_about.png                        |  Bin [31m0[m -> [32m518[m bytes
+ .../Resources/tab_about@2x.png                     |  Bin [31m0[m -> [32m1137[m bytes
+ .../Resources/tab_about@3x.png                     |  Bin [31m0[m -> [32m2019[m bytes
+ .../Resources/tab_feed.png                         |  Bin [31m0[m -> [32m415[m bytes
+ .../Resources/tab_feed@2x.png                      |  Bin [31m0[m -> [32m863[m bytes
+ .../Resources/tab_feed@3x.png                      |  Bin [31m0[m -> [32m1400[m bytes
+ .../Xamarin.FormsDemo_CHN.iOS.csproj               |  154 [32m+[m
+ .../Xamarin.FormsDemo_CHN.iOS/packages.config      |    4 [32m+[m
+ .../Xamarin.FormsDemo_CHN/App.xaml                 |   19 [32m+[m
+ .../Xamarin.FormsDemo_CHN/App.xaml.cs              |   38 [32m+[m
+ .../Helpers/MessengingCenterAlert.cs               |   39 [32m+[m
+ .../Helpers/ObservableObject.cs                    |   54 [32m+[m
+ .../Helpers/ObservableRangeCollection.cs           |  103 [32m+[m
+ .../Xamarin.FormsDemo_CHN/Models/BaseDataObject.cs |   33 [32m+[m
+ .../Xamarin.FormsDemo_CHN/Models/Item.cs           |   19 [32m+[m
+ .../Properties/AssemblyInfo.cs                     |   30 [32m+[m
+ .../Xamarin.FormsDemo_CHN/Services/IDataStore.cs   |   18 [32m+[m
+ .../Services/MockDataStore.cs                      |   97 [32m+[m
+ .../ViewModels/AboutViewModel.cs                   |   21 [32m+[m
+ .../ViewModels/BaseViewModel.cs                    |   36 [32m+[m
+ .../ViewModels/ItemDetailViewModel.cs              |   21 [32m+[m
+ .../ViewModels/ItemsViewModel.cs                   |   61 [32m+[m
+ .../Xamarin.FormsDemo_CHN/Views/AboutPage.xaml     |   68 [32m+[m
+ .../Xamarin.FormsDemo_CHN/Views/AboutPage.xaml.cs  |   13 [32m+[m
+ .../Views/ItemDetailPage.xaml                      |   10 [32m+[m
+ .../Views/ItemDetailPage.xaml.cs                   |   25 [32m+[m
+ .../Xamarin.FormsDemo_CHN/Views/ItemsPage.xaml     |   40 [32m+[m
+ .../Xamarin.FormsDemo_CHN/Views/ItemsPage.xaml.cs  |   46 [32m+[m
+ .../Xamarin.FormsDemo_CHN/Views/NewItemPage.xaml   |   15 [32m+[m
+ .../Views/NewItemPage.xaml.cs                      |   32 [32m+[m
+ .../Xamarin.FormsDemo_CHN.csproj                   |  117 [32m+[m
+ .../Xamarin.FormsDemo_CHN/packages.config          |    4 [32m+[m
+ 61 files changed, 7551 insertions(+)
+
+[33mcommit 8fe78640c006ff47788960a1130a5326336c8b7f[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Administrator <Administrator@USER-20170316IW>
+Date:   Thu Jul 27 13:02:48 2017 +0800
+
+    添加 .gitignore 和 .gitattributes。
+
+ .gitattributes |  63 [32m++++++++++++++[m
+ .gitignore     | 261 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 324 insertions(+)

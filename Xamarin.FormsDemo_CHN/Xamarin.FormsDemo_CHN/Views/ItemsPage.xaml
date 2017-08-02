@@ -5,7 +5,7 @@
               Title="{Binding Title}"
              x:Name="BrowseItemsPage">
   <ContentPage.ToolbarItems>
-  	<ToolbarItem Text="Add Item" Clicked="AddItem_Clicked" />
+  	<ToolbarItem Text="扫一扫" Clicked="AddItem_Clicked" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <StackLayout>

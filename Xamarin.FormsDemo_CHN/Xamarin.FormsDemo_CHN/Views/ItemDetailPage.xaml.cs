@@ -18,7 +18,6 @@ namespace Xamarin.FormsDemo_CHN.Views
         public ItemDetailPage(ItemDetailViewModel viewModel)
         {
             InitializeComponent();
-
             BindingContext = this.viewModel = viewModel;
         }
     }
