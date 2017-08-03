@@ -17,7 +17,7 @@ namespace Xamarin.FormsDemo_CHN.Views
         public ItemsPage()
         {
             InitializeComponent();
-
+            
             BindingContext = viewModel = new ItemsViewModel();
         }
 
@@ -28,8 +28,6 @@ namespace Xamarin.FormsDemo_CHN.Views
                 return;
 
             await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
-
-            // Manually deselect item
             ItemsListView.SelectedItem = null;
         }
 

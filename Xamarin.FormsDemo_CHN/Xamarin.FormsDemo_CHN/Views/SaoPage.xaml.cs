@@ -34,8 +34,6 @@ namespace Xamarin.FormsDemo_CHN.Views
             zxing.OnScanResult += (result) =>
                 Device.BeginInvokeOnMainThread(async () =>
                 {
-
-                    // Stop analysis until we navigate away so we don't keep reading barcodes
                     zxing.IsAnalyzing = false;
                     zxing.IsScanning = false;
                     try
@@ -65,7 +63,6 @@ namespace Xamarin.FormsDemo_CHN.Views
             };
             overlay.FlashButtonClicked += (sender, e) =>
             {
-                //  DisplayAlert("提示", "按钮事件", "确定");
                 try
                 {
 
@@ -98,17 +95,7 @@ namespace Xamarin.FormsDemo_CHN.Views
             };
             grid.Children.Add(zxing);
             grid.Children.Add(overlay);
-
-            //// The root page of your application
             Content = grid;
-
-            //}
-            //catch (Exception ex)
-            //{
-
-            //  // throw;
-
-            //}
         }
 
         private void Overlay_FlashButtonClicked(Button sender, EventArgs e)

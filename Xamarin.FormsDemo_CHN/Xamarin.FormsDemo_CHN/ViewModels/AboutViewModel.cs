@@ -8,7 +8,7 @@ namespace Xamarin.FormsDemo_CHN.ViewModels
     {
         public AboutViewModel()
         {
-            Title = "About";
+            Title = "关于";
 
             OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://xamarin.com/platform")));
         }

@@ -24,7 +24,7 @@ namespace Xamarin.FormsDemo_CHN
                     Title = "用户信息",
                     Icon = Device.OnPlatform("tab_about.png", null, null)
                 } ,
-                Detail = new NavigationPage(new ItemsPage())
+                Detail = new NavigationPage(new MainPage())
                 {
                     Title = "列表",
                     Icon = Device.OnPlatform("tab_feed.png", null, null)
