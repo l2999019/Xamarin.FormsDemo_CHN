@@ -167,7 +167,8 @@ namespace Xamarin.FormsDemo_CHN.Droid
 
 
             bar.ItemContainer.SetBackgroundColor(barcolor.ToAndroid());
-            bar.SetActiveTabColor()
+            bar.SetActiveTabColor(Color.White);
+            //bar.ItemContainer.
             //bar.ItemContainer.SetBackgroundColor(Color.Red);
 
             return bar;

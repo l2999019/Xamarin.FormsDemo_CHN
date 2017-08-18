@@ -13,7 +13,7 @@ namespace Xamarin.FormsDemo_CHN.Forms
         Label topText;
         Label botText;
         Button flash;
-
+        int weizhi = -120;
         public delegate void FlashButtonClickedDelegate(Button sender, EventArgs e);
         public event FlashButtonClickedDelegate FlashButtonClicked;
 
@@ -82,16 +82,17 @@ namespace Xamarin.FormsDemo_CHN.Forms
             //    BackgroundColor = Color.Black,
             //    Opacity = 0.7,
             //}, 0, 2);
-            var redline = new BoxView
+            var AbsoluteLayouts = new AbsoluteLayout();
+           
+            var redline = new Image
             {
-                VerticalOptions = LayoutOptions.Center,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                HeightRequest = 3,
-                BackgroundColor = Color.Red,
-                Opacity = 0.6,
+                Source="saomiao.png"
             };
-            Children.Add(redline, 1, 1);
-            SetColumnSpan(redline, 3);
+            AbsoluteLayout.SetLayoutBounds(redline, new Rectangle(1, weizhi, 1, 1));
+            AbsoluteLayout.SetLayoutFlags(redline, AbsoluteLayoutFlags.SizeProportional);
+            AbsoluteLayouts.Children.Add(redline);
+            Children.Add(AbsoluteLayouts, 1, 1);
+            SetColumnSpan(AbsoluteLayouts, 3);
             topText = new Label
             {
                 VerticalOptions = LayoutOptions.Center,
@@ -142,6 +143,16 @@ namespace Xamarin.FormsDemo_CHN.Forms
             SetColumnSpan(MyStackLayout, 5);
             //this.ColumnSpacing = 0;
             this.RowSpacing = 0;
+            Device.StartTimer(TimeSpan.FromSeconds(0.2), () =>
+            {
+                weizhi += 7;
+                AbsoluteLayout.SetLayoutBounds(redline, new Rectangle(1,weizhi, 1, 1));
+                if (weizhi > 150)
+                {
+                    weizhi = -100;
+                }
+                return true;
+            });
         }
 
         public static readonly BindableProperty TopTextProperty =
