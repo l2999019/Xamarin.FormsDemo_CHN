@@ -21,6 +21,10 @@
         <ListView.ItemTemplate>
           <DataTemplate>
             <ViewCell>
+                <ViewCell.ContextActions>
+                 <MenuItem Clicked="MenuItem_Clicked" CommandParameter="{Binding .}" Text="取消" />
+                 <MenuItem Clicked="MenuItem_Clicked_1" CommandParameter="{Binding .}" Text="删除" IsDestructive="True" />
+                 </ViewCell.ContextActions>
               <StackLayout Padding="10">
                 <Label Text="{Binding Text}"
                        LineBreakMode="NoWrap"

@@ -88,5 +88,16 @@ namespace Xamarin.FormsDemo_CHN.Views
             if (viewModel.Items.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
         }
+
+        private void MenuItem_Clicked(object sender, EventArgs e)
+        {
+            //sender
+            DisplayAlert("提示", "取消事件", "确定");
+        }
+
+        private void MenuItem_Clicked_1(object sender, EventArgs e)
+        {
+            DisplayAlert("提示", "删除事件", "确定");
+        }
     }
 }

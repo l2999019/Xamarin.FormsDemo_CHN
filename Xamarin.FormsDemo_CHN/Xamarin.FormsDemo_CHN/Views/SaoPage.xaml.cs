@@ -30,7 +30,7 @@ namespace Xamarin.FormsDemo_CHN.Views
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 VerticalOptions = LayoutOptions.FillAndExpand
             };
-
+           
             zxing.OnScanResult += (result) =>
                 Device.BeginInvokeOnMainThread(async () =>
                 {
@@ -39,7 +39,7 @@ namespace Xamarin.FormsDemo_CHN.Views
                     try
                     {
 
-                       CrossLamp.Current.TurnOff();
+                        zxing.IsTorchOn = false;
 
                     }
                     catch (Exception)
@@ -66,18 +66,17 @@ namespace Xamarin.FormsDemo_CHN.Views
                 try
                 {
 
-                    if (!CrossLampState)
+                    if (!zxing.IsTorchOn)
                     {
                         sender.Text = "关灯";
-                        CrossLampState = true;
-                        CrossLamp.Current.TurnOn();
+                        //CrossLampState = true;
+                        zxing.IsTorchOn = true;
 
                     }
                     else
                     {
                         sender.Text = "开灯";
-                        CrossLampState = false;
-                        CrossLamp.Current.TurnOff();
+                        zxing.IsTorchOn = false;
                     }
 
                 }
@@ -114,7 +113,7 @@ namespace Xamarin.FormsDemo_CHN.Views
         protected override void OnDisappearing()
         {
             zxing.IsScanning = false;
-          
+            zxing.IsTorchOn = false;
 
             base.OnDisappearing();
         }
