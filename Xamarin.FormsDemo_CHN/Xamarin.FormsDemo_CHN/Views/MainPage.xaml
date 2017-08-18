@@ -2,8 +2,8 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:local="clr-namespace:Xamarin.FormsDemo_CHN.Views;assembly=Xamarin.FormsDemo_CHN"
-            x:Class="Xamarin.FormsDemo_CHN.Views.MainPage" BarBackgroundColor="#d6f2ff">
-    <local:ItemsPage Icon="ic_phone_logo"/>
-    <local:AboutPage Icon="ic_about"/>
-    <local:TestPage  Icon="ic_contact" />
+            x:Class="Xamarin.FormsDemo_CHN.Views.MainPage" BarBackgroundColor="#7EC0EE" BarTextColor="White">
+    <local:ItemsPage Icon="ic_Messaget"/>
+    <local:AboutPage Icon="ic_Info"/>
+    <local:TestPage  Icon="ic_Star" />
 </TabbedPage>

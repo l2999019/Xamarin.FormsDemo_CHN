@@ -19,11 +19,11 @@ namespace Xamarin.FormsDemo_CHN.Views
             InitializeComponent();
             Title = "用户信息";
             List<MuenModel> list = new List<MuenModel>();
-            list.Add(new MuenModel { Name = "我的二维码", Url = "这里是中文" });
-            list.Add(new MuenModel { Name = "我的钱包", Url = "sss" });
-            list.Add(new MuenModel { Name = "我的记录", Url = "sss" });
-            list.Add(new MuenModel { Name = "我的优惠", Url = "sss" });
-            list.Add(new MuenModel { Name = "我的订单", Url = "sss" });
+            list.Add(new MuenModel { Name = "我的二维码", Url = "这里是中文", Image= "mue_Qr_Code.png" });
+            list.Add(new MuenModel { Name = "我的钱包", Url = "sss", Image = "mue_Wallet.png" });
+            list.Add(new MuenModel { Name = "我的记录", Url = "sss", Image = "mue_Pencil.png" });
+            list.Add(new MuenModel { Name = "我的优惠", Url = "sss", Image = "mue_Diploma.png" });
+            list.Add(new MuenModel { Name = "我的订单", Url = "sss", Image = "mue_Holding.png" });
             listView.ItemsSource = list;
         }
 

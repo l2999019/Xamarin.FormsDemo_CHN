@@ -7,23 +7,20 @@
              >
     <ContentPage.Content>
         <StackLayout>
-            <Image Source="profile_generic.png"></Image>
-            <Label Text="这里是一些提示信息~~" />
-            <ListView x:Name="listView" ItemSelected="listView_ItemSelected" >
+            <Image Source="Man_with_mackbook96.png"></Image>
+            <Label Text="每天都是新的开始!" HorizontalOptions="Center" VerticalOptions="Center" />
+            <ListView x:Name="listView" ItemSelected="listView_ItemSelected" VerticalOptions="FillAndExpand" >
             <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Padding="10">
-                            <Label Text="{Binding Name}"
-                       LineBreakMode="NoWrap"
-                       Style="{DynamicResource ListItemTextStyle}"
-                       FontSize="16"/>
-                            <!--<Label Text="{Binding Url}"
-                       LineBreakMode="NoWrap"
-                       Style="{DynamicResource ListItemDetailTextStyle}"
-                       FontSize="13"/>-->
-                        </StackLayout>
-                    </ViewCell>
+                    <DataTemplate>
+                        <ViewCell >
+                            <StackLayout Orientation="Horizontal" Margin="3">
+                                <Image Source="{Binding Image}"  WidthRequest="50" />
+                                <Label Text="{Binding Name}" Margin="10"
+                                 LineBreakMode="NoWrap"
+                                 Style="{DynamicResource ListItemTextStyle}"
+                                 FontSize="16"/>
+                            </StackLayout>
+                        </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
             </ListView>

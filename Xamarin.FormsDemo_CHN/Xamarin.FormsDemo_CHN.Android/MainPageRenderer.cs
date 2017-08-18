@@ -167,7 +167,7 @@ namespace Xamarin.FormsDemo_CHN.Droid
 
 
             bar.ItemContainer.SetBackgroundColor(barcolor.ToAndroid());
-            
+            bar.SetActiveTabColor()
             //bar.ItemContainer.SetBackgroundColor(Color.Red);
 
             return bar;
@@ -175,6 +175,7 @@ namespace Xamarin.FormsDemo_CHN.Droid
 
         private void PopulateBottomBarItems(BottomBar bar, IEnumerable<Page> pages)
         {
+            
             var barItems = pages.Select(x => new BottomBarTab(Context.Resources.GetDrawable(x.Icon), x.Title));
 
             bar.SetItems(barItems.ToArray());
