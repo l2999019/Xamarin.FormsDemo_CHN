@@ -38,7 +38,7 @@
               <FormattedString.Spans>
                 <Span Text="这个App由C#编写的原生APP应用" />
                 <Span Text=" "/>
-                <Span Text="Xamarin Platform" FontAttributes="Bold" />
+                <Span Text="Xamarin 平台" FontAttributes="Bold" />
                 <Span Text="." />
               </FormattedString.Spans>
             </FormattedString>
@@ -48,17 +48,17 @@
           <Label.FormattedText>
             <FormattedString>
               <FormattedString.Spans>
-                <Span Text="It shares code with its" />
+                <Span Text="可以同时编译" />
                 <Span Text=" "/>
-                <Span Text="iOS, Android, and Windows" FontAttributes="Bold" />
+                <Span Text="iOS, Android 和 Windows" FontAttributes="Bold" />
                 <Span Text=" "/>
-                <Span Text="versions." />
+                <Span Text="的版本." />
               </FormattedString.Spans>
             </FormattedString>
           </Label.FormattedText>
         </Label>
         <Button Margin="0,10,0,0"
-                Text="关于我" 
+                Text="关于我（请点击）" 
                 Clicked="Button_Clicked"
                 BackgroundColor="{StaticResource Primary}"
                 TextColor="White"/>
