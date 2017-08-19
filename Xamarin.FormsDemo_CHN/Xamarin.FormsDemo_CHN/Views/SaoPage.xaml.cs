@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.FormsDemo_CHN.Forms;
+using Xamarin.FormsDemo_CHN.Helpers;
 using ZXing.Net.Mobile.Forms;
 
 namespace Xamarin.FormsDemo_CHN.Views
@@ -47,8 +48,17 @@ namespace Xamarin.FormsDemo_CHN.Views
 
 
                     }
+                    if (ToolsClass.IsUrl(result.Text))
+                    {
+                        Navigation.RemovePage(this);
+                        await Navigation.PushAsync(new WebViewPage(result.Text));
+                    }
+                    else
+                    {
+                        await DisplayAlert("二维码的值为：", result.Text, "确定");
+                    }
                     // Show an alert
-                    await DisplayAlert("Scanned Barcode", result.Text, "OK");
+
 
                     // Navigate away
                     await Navigation.PopAsync();

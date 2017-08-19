@@ -59,7 +59,7 @@
         </Label>
         <Button Margin="0,10,0,0"
                 Text="关于我" 
-                Command="{Binding OpenWebCommand}"
+                Clicked="Button_Clicked"
                 BackgroundColor="{StaticResource Primary}"
                 TextColor="White"/>
       </StackLayout>

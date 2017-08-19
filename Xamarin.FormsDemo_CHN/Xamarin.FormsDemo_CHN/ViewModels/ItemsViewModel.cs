@@ -26,6 +26,7 @@ namespace Xamarin.FormsDemo_CHN.ViewModels
                 var _item = item as Item;
                 Items.Add(_item);
                 await DataStore.AddItemAsync(_item);
+                
             });
         }
 

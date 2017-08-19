@@ -10,7 +10,12 @@ namespace Xamarin.FormsDemo_CHN.ViewModels
         {
             Title = "关于";
 
-            OpenWebCommand = new Command(() => Device.OpenUri(new Uri("http://www.cnblogs.com/GuZhenYin/")));
+            //OpenWebCommand = new Command(() => Device.OpenUri(new Uri("http://www.cnblogs.com/GuZhenYin/")));
+            //OpenWebCommand = new Command(() => {
+
+                
+
+            //});
         }
 
         /// <summary>
