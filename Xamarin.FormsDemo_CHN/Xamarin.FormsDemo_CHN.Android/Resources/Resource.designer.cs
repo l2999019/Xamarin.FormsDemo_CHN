@@ -3881,8 +3881,8 @@ namespace Xamarin.FormsDemo_CHN.Droid
 			// aapt resource value: 0x7f0200b3
 			public const int mue_Wallet = 2130837683;
 			
-			// aapt resource value: 0x7f0200ba
-			public const int notification_template_icon_bg = 2130837690;
+			// aapt resource value: 0x7f0200bd
+			public const int notification_template_icon_bg = 2130837693;
 			
 			// aapt resource value: 0x7f0200b4
 			public const int profile_generic = 2130837684;
@@ -3891,16 +3891,25 @@ namespace Xamarin.FormsDemo_CHN.Droid
 			public const int QQ20170727172154 = 2130837685;
 			
 			// aapt resource value: 0x7f0200b6
-			public const int saomiao = 2130837686;
+			public const int qr_code = 2130837686;
 			
 			// aapt resource value: 0x7f0200b7
-			public const int slideout = 2130837687;
+			public const int saomiao = 2130837687;
 			
 			// aapt resource value: 0x7f0200b8
-			public const int Wallet_128px = 2130837688;
+			public const int slideout = 2130837688;
 			
 			// aapt resource value: 0x7f0200b9
-			public const int Wallet_1801px = 2130837689;
+			public const int Splashscreen = 2130837689;
+			
+			// aapt resource value: 0x7f0200ba
+			public const int Start = 2130837690;
+			
+			// aapt resource value: 0x7f0200bb
+			public const int Wallet_128px = 2130837691;
+			
+			// aapt resource value: 0x7f0200bc
+			public const int Wallet_1801px = 2130837692;
 			
 			static Drawable()
 			{
