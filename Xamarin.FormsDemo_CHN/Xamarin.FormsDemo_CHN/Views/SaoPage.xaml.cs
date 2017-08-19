@@ -50,7 +50,7 @@ namespace Xamarin.FormsDemo_CHN.Views
                     }
                     if (ToolsClass.IsUrl(result.Text))
                     {
-                        Navigation.RemovePage(this);
+                        //Navigation.RemovePage(this);
                         await Navigation.PushAsync(new WebViewPage(result.Text));
                     }
                     else
