@@ -39,6 +39,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\BaseContentPage.cs" />
+    <Compile Include="Forms\MyBaiDuMaps.cs" />
     <Compile Include="Forms\MyZXingOverlay.cs" />
     <Compile Include="Helpers\MessengingCenterAlert.cs" />
     <Compile Include="Helpers\ObservableObject.cs" />
@@ -56,6 +57,9 @@
     <Compile Include="ViewModels\ItemsViewModel.cs" />
     <Compile Include="Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BaiDuMapPage.xaml.cs">
+      <DependentUpon>BaiDuMapPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\BarcodePage.xaml.cs">
       <DependentUpon>BarcodePage.xaml</DependentUpon>
@@ -183,6 +187,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\WebViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\BaiDuMapPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

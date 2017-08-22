@@ -29,9 +29,9 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
-    <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <Debugger>Xamarin</Debugger>
     <AndroidSupportedAbis />
     <AndroidEnableSGenConcurrent>false</AndroidEnableSGenConcurrent>
@@ -123,17 +123,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaiduMaps.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MainPageRenderer.cs" />
+    <Compile Include="MyBaiDuMapsRenderer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <AndroidNativeLibrary Include="Assets\arm64-v8a\libBaiduMapSDK_base_v4_3_2.so" />
+    <AndroidNativeLibrary Include="Assets\arm64-v8a\libBaiduMapSDK_map_v4_3_2.so" />
+    <AndroidNativeLibrary Include="Assets\arm64-v8a\liblocSDK7a.so" />
+    <AndroidNativeLibrary Include="Assets\armeabi\libBaiduMapSDK_base_v4_3_2.so" />
+    <AndroidNativeLibrary Include="Assets\armeabi\libBaiduMapSDK_map_v4_3_2.so" />
+    <AndroidNativeLibrary Include="Assets\armeabi\liblocSDK7a.so" />
+    <AndroidNativeLibrary Include="Assets\armeabi-v7a\libBaiduMapSDK_base_v4_3_2.so" />
+    <AndroidNativeLibrary Include="Assets\armeabi-v7a\libBaiduMapSDK_map_v4_3_2.so" />
+    <AndroidNativeLibrary Include="Assets\armeabi-v7a\liblocSDK7a.so" />
+    <AndroidNativeLibrary Include="Assets\x86\libBaiduMapSDK_base_v4_3_2.so" />
+    <AndroidNativeLibrary Include="Assets\x86\libBaiduMapSDK_map_v4_3_2.so" />
+    <AndroidNativeLibrary Include="Assets\x86\liblocSDK7a.so" />
+    <AndroidNativeLibrary Include="Assets\x86_64\libBaiduMapSDK_base_v4_3_2.so" />
+    <AndroidNativeLibrary Include="Assets\x86_64\libBaiduMapSDK_map_v4_3_2.so" />
+    <AndroidNativeLibrary Include="Assets\x86_64\liblocSDK7a.so" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
-    <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
@@ -147,6 +165,10 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\profile_generic.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\BaiDuMapBinDing.Android\BaiDuMapBinDing.Android.csproj">
+      <Project>{37ac8dad-96bd-4071-9bc4-3f1c0e9f1989}</Project>
+      <Name>BaiDuMapBinDing.Android</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Xamarin.FormsDemo_CHN\Xamarin.FormsDemo_CHN.csproj">
       <Project>{1c4c49bc-1672-4f32-a1ca-6fa8f501fe49}</Project>
       <Name>Xamarin.FormsDemo_CHN</Name>
@@ -253,6 +275,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\qr_code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="libs\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

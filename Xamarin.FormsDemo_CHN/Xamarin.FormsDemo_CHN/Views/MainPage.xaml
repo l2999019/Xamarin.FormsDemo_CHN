@@ -5,5 +5,5 @@
             x:Class="Xamarin.FormsDemo_CHN.Views.MainPage" BarBackgroundColor="#7EC0EE" BarTextColor="White">
     <local:ItemsPage Icon="ic_Messaget"/>
     <local:AboutPage Icon="ic_Info"/>
-    <local:TestPage  Icon="ic_Star" />
+    <local:BaiDuMapPage  Icon="ic_Star" />
 </TabbedPage>

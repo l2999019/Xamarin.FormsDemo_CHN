@@ -16,6 +16,7 @@ namespace Xamarin.FormsDemo_CHN.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            Xamarin.BaiduMaps.Init(null);
             ZXing.Net.Mobile.Forms.Android.Platform.Init();
             var v = CrossLamp.Current;
             LoadApplication(new App());
