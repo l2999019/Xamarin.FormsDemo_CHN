@@ -27,5 +27,8 @@
 	<uses-feature android:name="android.hardware.camera" />
 	<uses-feature android:name="android.hardware.camera.autofocus" />
 	<uses-feature android:name="android.hardware.camera.flash" />
-	<application android:label="@string/app_name" android:icon="@drawable/QQ20170727172154"></application>
+	<application android:label="@string/app_name" android:icon="@drawable/QQ20170727172154">
+    <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote"></service>
+    <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="4dd1YufHYWMuOjCMY5fObCPzq9UizcZv" />
+  </application>
 </manifest>

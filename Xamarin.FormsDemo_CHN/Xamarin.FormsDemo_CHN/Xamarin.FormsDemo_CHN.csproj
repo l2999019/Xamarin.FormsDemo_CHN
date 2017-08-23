@@ -38,8 +38,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BaiDuMapClass\ILocationService.cs" />
     <Compile Include="Forms\BaseContentPage.cs" />
-    <Compile Include="Forms\MyBaiDuMaps.cs" />
+    <Compile Include="BaiDuMapClass\MyBaiDuMaps.cs" />
     <Compile Include="Forms\MyZXingOverlay.cs" />
     <Compile Include="Helpers\MessengingCenterAlert.cs" />
     <Compile Include="Helpers\ObservableObject.cs" />

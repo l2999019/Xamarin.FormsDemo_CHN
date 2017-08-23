@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.FormsDemo_CHN.BaiDuMapClass;
 
 namespace Xamarin.FormsDemo_CHN.Forms
 {
@@ -184,47 +185,47 @@ namespace Xamarin.FormsDemo_CHN.Forms
                 set { SetValue(ShowZoomControlProperty, value); }
             }
 
-            //public ILocationService LocationService { get; internal set; }
-            //public IProjection Projection { get; internal set; }
+        public ILocationService LocationService { get;  set; }
+        //public IProjection Projection { get; internal set; }
 
-            //public IList<Pin> Pins => pins;
-            //private readonly ObservableCollection<Pin> pins = new ObservableCollection<Pin>();
+        //public IList<Pin> Pins => pins;
+        //private readonly ObservableCollection<Pin> pins = new ObservableCollection<Pin>();
 
-            //public IList<Polyline> Polylines => polylines;
-            //private readonly ObservableCollection<Polyline> polylines = new ObservableCollection<Polyline>();
+        //public IList<Polyline> Polylines => polylines;
+        //private readonly ObservableCollection<Polyline> polylines = new ObservableCollection<Polyline>();
 
-            //public IList<Polygon> Polygons => polygons;
-            //private readonly ObservableCollection<Polygon> polygons = new ObservableCollection<Polygon>();
+        //public IList<Polygon> Polygons => polygons;
+        //private readonly ObservableCollection<Polygon> polygons = new ObservableCollection<Polygon>();
 
-            //public IList<Circle> Circles => circles;
-            //private readonly ObservableCollection<Circle> circles = new ObservableCollection<Circle>();
+        //public IList<Circle> Circles => circles;
+        //private readonly ObservableCollection<Circle> circles = new ObservableCollection<Circle>();
 
-            //public event EventHandler<MapBlankClickedEventArgs> BlankClicked;
-            //internal void SendBlankClicked(Coordinate pos)
-            //{
-            //    BlankClicked?.Invoke(this, new MapBlankClickedEventArgs(pos));
-            //}
+        //public event EventHandler<MapBlankClickedEventArgs> BlankClicked;
+        //internal void SendBlankClicked(Coordinate pos)
+        //{
+        //    BlankClicked?.Invoke(this, new MapBlankClickedEventArgs(pos));
+        //}
 
-            //public event EventHandler<MapPoiClickedEventArgs> PoiClicked;
-            //internal void SendPoiClicked(Poi poi)
-            //{
-            //    PoiClicked?.Invoke(this, new MapPoiClickedEventArgs(poi));
-            //}
+        //public event EventHandler<MapPoiClickedEventArgs> PoiClicked;
+        //internal void SendPoiClicked(Poi poi)
+        //{
+        //    PoiClicked?.Invoke(this, new MapPoiClickedEventArgs(poi));
+        //}
 
-            //public event EventHandler<MapDoubleClickedEventArgs> DoubleClicked;
-            //internal void SendDoubleClicked(Coordinate pos)
-            //{
-            //    DoubleClicked?.Invoke(this, new MapDoubleClickedEventArgs(pos));
-            //}
+        //public event EventHandler<MapDoubleClickedEventArgs> DoubleClicked;
+        //internal void SendDoubleClicked(Coordinate pos)
+        //{
+        //    DoubleClicked?.Invoke(this, new MapDoubleClickedEventArgs(pos));
+        //}
 
-            //public event EventHandler<MapLongClickedEventArgs> LongClicked;
-            //internal void SendLongClicked(Coordinate pos)
-            //{
-            //    LongClicked?.Invoke(this, new MapLongClickedEventArgs(pos));
-            //}
+        //public event EventHandler<MapLongClickedEventArgs> LongClicked;
+        //internal void SendLongClicked(Coordinate pos)
+        //{
+        //    LongClicked?.Invoke(this, new MapLongClickedEventArgs(pos));
+        //}
 
-            public event EventHandler<EventArgs> Loaded;
-            internal void SendLoaded()
+        public event EventHandler<EventArgs> Loaded;
+            public void SendLoaded()
             {
                 Loaded?.Invoke(this, EventArgs.Empty);
             }

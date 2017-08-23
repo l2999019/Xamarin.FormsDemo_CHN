@@ -17,6 +17,7 @@ using System.ComponentModel;
 using AG = Android.Graphics;
 using Xamarin.FormsDemo_CHN.Forms;
 using Xamarin.FormsDemo_CHN.Droid;
+using Xamarin.FormsDemo_CHN.Droid.BaiDuMapClass;
 
 [assembly: ExportRenderer(typeof(MyBaiDuMaps), typeof(MyBaiDuMapsRenderer))]
 namespace Xamarin.FormsDemo_CHN.Droid
@@ -34,7 +35,7 @@ namespace Xamarin.FormsDemo_CHN.Droid
                 if (null != Element)
                 {
                     //Map.Pins.Clear();
-                    //((LocationServiceImpl)Map.LocationService).Unregister();
+                    ((LocationServiceImpl)Map.LocationService).Unregister();
                 }
 
                 //pinImpl.Unregister(Map);
@@ -79,7 +80,7 @@ namespace Xamarin.FormsDemo_CHN.Droid
             {
                 var oldMap = e.OldElement;
                // oldMap.Pins.Clear();
-                //((LocationServiceImpl)oldMap.LocationService).Unregister();
+                ((LocationServiceImpl)oldMap.LocationService).Unregister();
 
                 MapView oldMapView = Control;
                 oldMapView.Map.Clear();
@@ -99,7 +100,7 @@ namespace Xamarin.FormsDemo_CHN.Droid
 
             if (null != e.NewElement)
             {
-                //Map.LocationService = new LocationServiceImpl(NativeMap, Context);
+                Map.LocationService = new LocationServiceImpl(NativeMap, Context);
 
                 //NativeMap.Map.MapClick += OnMapClick;
                 //NativeMap.Map.MapPoiClick += OnMapPoiClick;
@@ -346,9 +347,9 @@ namespace Xamarin.FormsDemo_CHN.Droid
 
         public void OnMapLoaded()
         {
-            //Map.Projection = new ProjectionImpl(NativeMap);
-            //NativeMap.OnResume();
-            //Map.SendLoaded();
+           // Map.Projection = new ProjectionImpl(NativeMap);
+            NativeMap.OnResume();
+            Map.SendLoaded();
         }
     }
 }
