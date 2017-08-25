@@ -36,7 +36,6 @@ namespace Xamarin.FormsDemo_CHN.Droid
             // Required to say packager to not to add child pages automatically
             AutoPackage = false;
         }
-
         public void OnTabSelected(int position)
         {
             LoadPageContent(position);
@@ -222,7 +221,7 @@ namespace Xamarin.FormsDemo_CHN.Droid
                 renderer = Platform.CreateRenderer(_currentPage);
                 Platform.SetRenderer(_currentPage, renderer);
 
-                AddView(renderer.ViewGroup);
+               
             }
             else
             {
@@ -231,8 +230,10 @@ namespace Xamarin.FormsDemo_CHN.Droid
                 var basePage = _currentPage as BaseContentPage;
                 basePage?.SendAppearing();
             }
-
+            
+            AddView(renderer.ViewGroup);
             renderer.ViewGroup.Visibility = ViewStates.Visible;
+          
         }
 
         private void UnloadCurrentPage()
@@ -241,13 +242,24 @@ namespace Xamarin.FormsDemo_CHN.Droid
             {
                 var basePage = _currentPage as BaseContentPage;
                 basePage?.SendDisappearing();
-
                 var renderer = Platform.GetRenderer(_currentPage);
 
                 if (renderer != null)
                 {
                     renderer.ViewGroup.Visibility = ViewStates.Invisible;
+                    RemoveView(renderer.ViewGroup);
+                    //for (int i = 0; i < renderer.ViewGroup.ChildCount; i++)
+                    //{
+                    //    /**让viewgroup隐藏还不行，子view还是占用了地方， 
+                    //     * 点击焦点还是会选中，得一口气把所以子view 
+                    //     * 包括 viewgroup 都隐藏掉**/
+                    //    renderer.ViewGroup.GetChildAt(i).Visibility = ViewStates.Invisible;
+                    //}
+                    // renderer.ViewGroup.views
+                    //renderer.Dispose();
+                    //renderer.ViewGroup.Dispose();
                 }
+                
             }
         }
     }

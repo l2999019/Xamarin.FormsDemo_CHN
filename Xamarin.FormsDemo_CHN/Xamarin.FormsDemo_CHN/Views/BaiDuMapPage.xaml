@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+ 
+<pages:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Xamarin.FormsDemo_CHN.Views;assembly=Xamarin.FormsDemo_CHN"
 		     xmlns:maps="clr-namespace:Xamarin.FormsDemo_CHN.Forms;assembly=Xamarin.FormsDemo_CHN"
+             xmlns:pages="clr-namespace:Xamarin.FormsDemo_CHN.Forms;assembly=Xamarin.FormsDemo_CHN"
              Title="百度地图"
              x:Class="Xamarin.FormsDemo_CHN.Views.BaiDuMapPage">
     <ContentPage.Content>
@@ -11,4 +13,4 @@
             <Button x:Name="btnTrack" Text="Switch" Clicked="btnTrack_Clicked" />
         </StackLayout>
     </ContentPage.Content>
-</ContentPage>
+</pages:BaseContentPage>

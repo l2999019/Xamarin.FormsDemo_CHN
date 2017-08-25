@@ -25,8 +25,9 @@ namespace Xamarin.FormsDemo_CHN.Droid.BaiDuMapClass
         public LocationServiceImpl(BMap.MapView mapView, Context context)
         {
             this.mapView = mapView;
-
+            
             LocationClientOption option = new LocationClientOption();
+            
             option.SetLocationMode(LocationClientOption.LocationMode.HightAccuracy);
             option.CoorType = "bd09ll"; // gcj02 by default
             option.ScanSpan = 1000; // 0 by default(just once)

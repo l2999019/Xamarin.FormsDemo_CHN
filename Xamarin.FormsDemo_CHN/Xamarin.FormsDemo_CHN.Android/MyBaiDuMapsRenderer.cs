@@ -27,6 +27,7 @@ namespace Xamarin.FormsDemo_CHN.Droid
         protected MapView NativeMap => Control;
         protected MyBaiDuMaps Map => Element;
 
+        
 
         protected override void Dispose(bool disposing)
         {
@@ -101,7 +102,7 @@ namespace Xamarin.FormsDemo_CHN.Droid
             if (null != e.NewElement)
             {
                 Map.LocationService = new LocationServiceImpl(NativeMap, Context);
-
+              // NativeMap.OnResume
                 //NativeMap.Map.MapClick += OnMapClick;
                 //NativeMap.Map.MapPoiClick += OnMapPoiClick;
                 //NativeMap.Map.MapDoubleClick += OnMapDoubleClick;
@@ -328,12 +329,7 @@ namespace Xamarin.FormsDemo_CHN.Droid
             NativeMap.Map.SetMaxAndMinZoomLevel(Map.MaxZoomLevel, Map.MinZoomLevel);
         }
 
-        //void UpdateCenter()
-        //{
-        //    NativeMap.Map.AnimateMapStatus(
-        //        MapStatusUpdateFactory.NewLatLng(MyBaiDuMaps.Center.ToNative())
-        //    );
-        //}
+
 
         void UpdateShowScaleBar()
         {
@@ -343,6 +339,7 @@ namespace Xamarin.FormsDemo_CHN.Droid
         void UpdateShowZoomControl()
         {
             NativeMap.ShowZoomControls(Map.ShowZoomControl);
+            
         }
 
         public void OnMapLoaded()
@@ -350,6 +347,18 @@ namespace Xamarin.FormsDemo_CHN.Droid
            // Map.Projection = new ProjectionImpl(NativeMap);
             NativeMap.OnResume();
             Map.SendLoaded();
+        }
+
+        protected override void OnAttachedToWindow()
+        {
+            NativeMap.Visibility = ViewStates.Visible;
+            NativeMap.OnResume();
+            base.OnAttachedToWindow();
+        }
+        protected override void OnDetachedFromWindow()
+        {
+            NativeMap.Visibility = ViewStates.Invisible;
+            base.OnDetachedFromWindow();
         }
     }
 }

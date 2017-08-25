@@ -21,6 +21,7 @@ namespace Xamarin.FormsDemo_CHN.Views
             base.OnCurrentPageChanged();
 
             Title = CurrentPage?.Title;
+            
         }
     }
 }

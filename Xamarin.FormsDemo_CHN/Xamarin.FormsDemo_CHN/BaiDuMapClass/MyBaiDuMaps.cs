@@ -30,7 +30,10 @@ namespace Xamarin.FormsDemo_CHN.Forms
 
                 //pointAnnotations.CollectionChanged += AnnotationsCollectionChanged;
             }
+        public void onResume()
+        {
 
+        }
             // MapType
             public static readonly BindableProperty MapTypeProperty = BindableProperty.Create(
                 propertyName: nameof(MapType),

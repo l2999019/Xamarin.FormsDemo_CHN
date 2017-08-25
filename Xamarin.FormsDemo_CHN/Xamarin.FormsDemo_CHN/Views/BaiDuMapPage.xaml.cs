@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,19 +13,33 @@ using Xamarin.FormsDemo_CHN.Forms;
 namespace Xamarin.FormsDemo_CHN.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class BaiDuMapPage : ContentPage
+    public partial class BaiDuMapPage : BaseContentPage
     {
         public BaiDuMapPage()
         {
             InitializeComponent();
             map.ShowCompass = true;
+            map.IsVisible = true;
             map.Loaded += Map_Loaded;
          
         }
 
         private void Map_Loaded(object sender, EventArgs e)
         {
+            
             InitLocationService();
+        }
+
+        protected override void OnDisappearing()
+        {
+             //= false;
+            base.OnDisappearing();
+        }
+
+        protected override void OnAppearing()
+        {
+            //map.IsVisible = true ;
+            base.OnAppearing();
         }
 
         public void InitLocationService()
