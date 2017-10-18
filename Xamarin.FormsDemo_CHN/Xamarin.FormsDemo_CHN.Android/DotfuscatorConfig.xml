@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE dotfuscator SYSTEM "http://www.preemptive.com/dotfuscator/dtd/dotfuscator_v2.3.dtd">
+<dotfuscator version="2.3">
+  <propertylist>
+    <property name="InDir" value="obj\Release\DotfuscatorXamarin\dfin" />
+    <property name="OutDir" value="obj\Release\DotfuscatorXamarin\dfout" />
+    <property name="ReportDir" value="DotfuscatorReports\Release" />
+  </propertylist>
+  <global>
+    <option>monocompat</option>
+  </global>
+  <input>
+    <asmlist>
+      <inputassembly refid="0a3e445d-4eb8-4956-80ee-449f3afae589">
+        <option>honoroas</option>
+        <option>stripoa</option>
+        <option>library</option>
+        <option>transformxaml</option>
+        <file dir="${configdir}\${InDir}" name="BaiDuMapBinDing.Android.dll" />
+      </inputassembly>
+      <inputassembly refid="d195c3d8-ec12-4bfc-92e8-bef7091e70cc">
+        <option>honoroas</option>
+        <option>stripoa</option>
+        <option>library</option>
+        <option>transformxaml</option>
+        <file dir="${configdir}\${InDir}" name="Xamarin.FormsDemo_CHN.dll" />
+      </inputassembly>
+      <inputassembly refid="3f5c2b09-6f15-4b92-abdf-44fc8720ae15">
+        <option>honoroas</option>
+        <option>stripoa</option>
+        <option>library</option>
+        <option>transformxaml</option>
+        <file dir="${configdir}\${InDir}" name="Xamarin.FormsDemo_CHN.Android.dll" />
+      </inputassembly>
+    </asmlist>
+  </input>
+  <output>
+    <file dir="${configdir}\${OutDir}" />
+  </output>
+  <renaming>
+    <option>xmlserialization</option>
+    <mapping>
+      <mapoutput overwrite="true">
+        <file dir="${configdir}\${ReportDir}" name="Renaming.xml" />
+      </mapoutput>
+    </mapping>
+    <referencerulelist />
+  </renaming>
+  <sos mergeruntime="true">
+    <option>version:v4</option>
+    <option>disable</option>
+    <option>dontsendtamper</option>
+  </sos>
+  <smartobfuscation>
+    <smartobfuscationreport verbosity="all" overwrite="true">
+      <file dir="${configdir}\${ReportDir}" name="SmartObfuscation.xml" />
+    </smartobfuscationreport>
+  </smartobfuscation>
+</dotfuscator>

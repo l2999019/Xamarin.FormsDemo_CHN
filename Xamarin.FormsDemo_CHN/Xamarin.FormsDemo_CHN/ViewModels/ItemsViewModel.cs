@@ -23,6 +23,7 @@ namespace Xamarin.FormsDemo_CHN.ViewModels
 
             MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
             {
+                
                 var _item = item as Item;
                 Items.Add(_item);
                 await DataStore.AddItemAsync(_item);
@@ -58,5 +59,9 @@ namespace Xamarin.FormsDemo_CHN.ViewModels
                 IsBusy = false;
             }
         }
+
+
+
+
     }
 }
