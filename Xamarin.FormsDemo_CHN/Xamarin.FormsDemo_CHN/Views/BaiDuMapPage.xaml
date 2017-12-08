@@ -10,7 +10,7 @@
     <ContentPage.Content>
         <StackLayout>
             <maps:MyBaiDuMaps x:Name="map"/>
-            <Button x:Name="btnTrack" Text="Switch" Clicked="btnTrack_Clicked" />
+            <Button x:Name="btnTrack" Text="定位" Clicked="btnTrack_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </pages:BaseContentPage>
