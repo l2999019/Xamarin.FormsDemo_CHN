@@ -39,6 +39,12 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="BaiDuMapClass\ILocationService.cs" />
+    <Compile Include="CustomCells\IncomingViewCell.xaml.cs">
+      <DependentUpon>IncomingViewCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomCells\OutgoingViewCell.xaml.cs">
+      <DependentUpon>OutgoingViewCell.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\BaseContentPage.cs" />
     <Compile Include="BaiDuMapClass\MyBaiDuMaps.cs" />
     <Compile Include="Forms\MyZXingOverlay.cs" />
@@ -209,6 +215,19 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\SheBeiInfoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="CustomCells\IncomingViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CustomCells\OutgoingViewCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
